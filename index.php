@@ -1,3 +1,3 @@
 <?php
-include_once("myform.html");
+include_once("myForm.html");
 ?>
