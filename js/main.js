@@ -8,11 +8,7 @@ function timestamp() {
 } 
 setInterval(timestamp, 500); 
 
-var n = document.getElementById("00N5g00000HuOR5").options.selectedIndex;
-var val = document.getElementById("00N5g00000HuOR5").options[n].value;
-var btn = document.getElementById("btn") ;
 
-if (val==""){btn.disabled=true;}
 
 /*---------------------RECAPTCHA-----------------------------*/
 function scaleCaptcha(elementWidth) {
