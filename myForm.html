@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuccessMotors</title>
+  <link rel="stylesheet" href="css/intlTelInput.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+  <div class="myform">
+    <form  action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+      <input type=hidden name='captcha_settings' value='{"keyname":"SuccessMotors","fallback":"true","orgId":"00D5g000005WTNy","ts":""}'>
+      <input type=hidden name="oid" value="00D5g000005WTNy">
+      <input type=hidden name="retURL" value="https://successmotors5.herokuapp.com">
+      <div class="company">
+        <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" required/>
+      </div>
+      <div class="first_name">
+        <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');"/>
+      </div>
+      <div class="last_name">
+        <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required oninput="this.value=this.value.replace(/[^a-zA-Z]/g,'');"/>
+      </div>
+      <div class="email">
+        <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="email" required/>
+      </div>
+      <div class="phone">
+        <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="tel" required/>
+        <span id="valid-msg" class="hide">✓ Valid</span>
+        <span id="error-msg" class="hide"></span>
+      </div>
+      <div class="interest">
+        Product Interest:
+        <select  class="select-css" id="00N5g00000HuOR5" name="00N5g00000HuOR5" title="Product Interest">
+          <option value="">--None--</option>
+          <option value="GC1000 series">GC1000 series</option>
+          <option value="GC5000 series">GC5000 series</option>
+          <option value="GC3000 series">GC3000 series</option>
+        </select>
+      </div>
+      
+
+      <div class="g-recaptcha" data-sitekey="6Lfo8XgbAAAAAK6kHX6gCouUPFAp27KLu5MXqgum"></div>
+      <input type="submit" name="submit" id="btn">
+    </form>
+  </div>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/intlTelInput.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
