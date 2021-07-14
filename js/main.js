@@ -34,6 +34,7 @@ document.getElementById('sendForm').onsubmit = function () {
        alert('You not checked the I am not a robot!');
        return false; 
   }
+  else alert('Success!');
 }   
 /*--------------------------PHONE--------------------------------*/
 
@@ -49,7 +50,7 @@ var input = document.querySelector("#phone");
 
 const phoneInput = window.intlTelInput(input, {
   preferredCountries: ["by", "ru", "cn"],
-  utilsScript: "utils.js.js" 
+  utilsScript: "utils.js" 
 });
 
 var reset = function() {
